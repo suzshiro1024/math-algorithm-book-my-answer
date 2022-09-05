@@ -18,8 +18,11 @@ int main()
       }
     }
     if (isPrime)
-      cout << i << endl;
+    {
+      cout << i << " ";
+    }
   }
+  cout << endl;
 
   return 0;
 }

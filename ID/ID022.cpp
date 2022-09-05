@@ -25,7 +25,7 @@ int main()
 
   const long long target = 100000;
 
-  int res = 0;
+  long long res = 0;
   for (int i = 1; i < 50000; i++)
   {
     res += count[i] * count[target - i];

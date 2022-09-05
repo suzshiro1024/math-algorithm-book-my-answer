@@ -10,7 +10,7 @@ int main()
 
   int A[N];
   for (int i = 0; i < N; i++)
-    A[i] = random() % 10;
+    cin >> A[i];
 
   int dp[N];
   for (int i = 0; i < N; i++)
@@ -27,8 +27,7 @@ int main()
     }
   }
 
-  for (int i = 0; i < N; i++)
-    cout << dp[i] << endl;
+  cout << dp[N - 1] << endl;
 
   return 0;
 }

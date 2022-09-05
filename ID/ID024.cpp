@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -11,15 +12,13 @@ int main()
   int choice[N];
 
   for (int i = 0; i < N; i++)
-    cin >> score[i];
-  for (int i = 0; i < N; i++)
-    cin >> choice[i];
+    cin >> choice[i] >> score[i];
 
-  float expect = 0;
+  double expect = 0;
   for (int i = 0; i < N; i++)
-    expect += (float)score[i] / choice[i];
+    expect += 1.0 * score[i] / choice[i];
 
-  cout << expect << endl;
+  cout << fixed << setprecision(15) << expect << endl;
 
   return 0;
 }

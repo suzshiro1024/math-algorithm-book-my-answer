@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -11,13 +12,15 @@ int main()
   int time_b[N + 1];
 
   for (int i = 1; i < N + 1; i++)
-    cin >> time_a[i] >> time_b[i];
-
-  float expect = 0;
+    cin >> time_a[i];
   for (int i = 1; i < N + 1; i++)
-    expect += (float)time_a[i] / 3 + (float)2 * time_b[i] / 3;
+    cin >> time_b[i];
 
-  cout << expect << endl;
+  double expect = 0;
+  for (int i = 1; i < N + 1; i++)
+    expect += 1.0 * time_a[i] / 3 + 1.0 * 2 * time_b[i] / 3;
+
+  cout << fixed << setprecision(15) << expect << endl;
 
   return 0;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -15,14 +16,14 @@ int main()
   for (int i = 0; i < N; i++)
     cin >> dice_red[i];
 
-  float expect = 0;
+  double expect_red = 0, expect_blue = 0;
   for (int i = 0; i < N; i++)
-    expect += (float)dice_blue[i] / N;
+    expect_blue += 1.0 * dice_blue[i] / N;
 
   for (int i = 0; i < N; i++)
-    expect += (float)dice_red[i] / N;
+    expect_red += 1.0 * dice_red[i] / N;
 
-  cout << expect << endl;
+  cout << fixed << setprecision(15) << expect_red + expect_blue << endl;
 
   return 0;
 }
