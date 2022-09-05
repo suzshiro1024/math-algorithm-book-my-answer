@@ -21,10 +21,10 @@ int main()
 
   if (prime)
   {
-    cout << "Prime" << endl;
+    cout << "Yes" << endl;
   }
   else
   {
-    cout << "Not Prime" << endl;
+    cout << "No" << endl;
   }
 }

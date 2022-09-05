@@ -24,14 +24,16 @@ int main()
   struct point_2D b;
   struct point_2D c;
 
-  cin >> a.x >> a.y >> b.x >> b.y >> c.x >> c.y;
+  cin >> a.x >> a.y;
+  cin >> b.x >> b.y;
+  cin >> c.x >> c.y;
 
   struct line f;
   f.a = c.y - b.y;
   f.b = -1 * (c.x - b.x);
-  f.c = c.y * (c.x - b.x) - c.x * (c.y - b.y);
+  f.c = c.x * b.y - b.x * c.y;
 
-  double ans = abs(f.a * a.x + f.b * a.y + f.c) / sqrt(f.a * f.a + f.b * f.b);
+  double ans = abs(f.a * a.x + f.b * a.y + f.c) / sqrt(1.0 * (f.a * f.a + f.b * f.b));
   cout << ans << endl;
 
   return 0;

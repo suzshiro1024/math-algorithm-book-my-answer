@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void mergesort(int l, int r, double A[], double C[])
+void mergesort(int l, int r, long long A[], long long C[])
 {
   if (r - l == 1)
     return;
@@ -46,22 +46,22 @@ void mergesort(int l, int r, double A[], double C[])
 
 int main()
 {
-  const double range = 100;
 
   int N;
   cin >> N;
 
-  double A[N + 1];
-  double C[N + 1];
+  long long A[N + 1];
+  long long C[N + 1];
   for (int i = 1; i <= N; i++)
   {
-    A[i] = range * random() / (double)RAND_MAX;
+    cin >> A[i];
   }
 
   mergesort(1, N + 1, A, C);
 
   for (int i = 1; i <= N; i++)
-    cout << A[i] << endl;
+    cout << A[i] << " ";
+  cout << endl;
 
   return 0;
 }
