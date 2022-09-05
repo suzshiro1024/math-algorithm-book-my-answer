@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 #include <limits>
 
@@ -35,7 +36,7 @@ int main()
     }
   }
 
-  cout << res << endl;
+  cout << fixed << setprecision(12) << res << endl;
 
   return 0;
 }

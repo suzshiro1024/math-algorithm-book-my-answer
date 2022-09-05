@@ -7,8 +7,8 @@ int main()
   int T, N;
   cin >> T >> N;
 
-  long long A[T + 1], B[T + 1] = {};
-  long long L[N + 1], R[N + 1] = {};
+  long long A[T + 1], B[T + 1] = {0};
+  long long L[N + 1], R[N + 1] = {0};
 
   for (int i = 1; i <= N; i++)
   {
@@ -17,7 +17,7 @@ int main()
     B[R[i]] -= 1;
   }
 
-  A[0] = 0;
+  A[0] = B[0];
   for (int i = 1; i <= T; i++)
   {
     A[i] = A[i - 1] + B[i];

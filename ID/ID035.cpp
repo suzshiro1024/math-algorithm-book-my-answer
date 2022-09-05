@@ -23,21 +23,21 @@ int main()
   point_2D center_A;
   point_2D center_B;
 
-  cin >> center_A.x >> center_B.y >> A.r >> center_B.x >> center_B.y >> B.r;
+  cin >> center_A.x >> center_A.y >> A.r >> center_B.x >> center_B.y >> B.r;
   A.center = center_A, B.center = center_B;
 
   double dist = sqrt((B.center.x - A.center.x) * (B.center.x - A.center.x) + (B.center.y - A.center.y) * (B.center.y - A.center.y));
 
   if (dist < abs(A.r - B.r))
-    cout << "type: 1" << endl;
+    cout << "1" << endl;
   else if (dist == abs(A.r - B.r))
-    cout << "type: 2" << endl;
+    cout << "2" << endl;
   else if (dist > abs(A.r - B.r) && dist < A.r + B.r)
-    cout << "type: 3" << endl;
+    cout << "3" << endl;
   else if (dist == A.r + B.r)
-    cout << "type: 4" << endl;
+    cout << "4" << endl;
   else if (dist > A.r + B.r)
-    cout << "type: 5" << endl;
+    cout << "5" << endl;
 
   return 0;
 }
