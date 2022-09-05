@@ -7,8 +7,8 @@ int main()
   int N, Q;
   cin >> N >> Q;
 
-  long long B[N + 1] = {0};
-  long long L[Q + 1], R[Q + 1], X[Q + 1] = {0};
+  long long B[N + 10] = {0};
+  long long L[Q + 10], R[Q + 10], X[Q + 10] = {0};
 
   for (int i = 1; i <= Q; i++)
   {
