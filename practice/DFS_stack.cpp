@@ -52,6 +52,8 @@ int main()
   Graph g = graph_init(N, M);
 
   bool seen[N];
+  for (int i = 0; i < N; i++)
+    seen[i] = false;
 
   dfs_solver(g, seen, 0);
 
